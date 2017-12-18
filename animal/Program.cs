@@ -36,7 +36,7 @@ namespace abstractTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("InterfaceTest");
+            Console.WriteLine("abstractTest");
             Console.WriteLine("想聽哪隻動物叫 1.鴨 2.狗 3.牛");
 
             while (true)
