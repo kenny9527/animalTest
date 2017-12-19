@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "abstractTest", "animal\abstractTest.csproj", "{D2F48E4B-7DDB-4C0D-A6F3-CC53DF3369B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "abstractTest", "animal\abstractTest.csproj", "{D2F48E4B-7DDB-4C0D-A6F3-CC53DF3369B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classTest", "classTest\classTest.csproj", "{02F8E077-37DF-4280-A37F-AF789B0F849A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "classTest", "classTest\classTest.csproj", "{02F8E077-37DF-4280-A37F-AF789B0F849A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTest", "InterfaceTest\InterfaceTest.csproj", "{4CC3F9B5-D6D4-4198-BFC8-CD01AA4B539C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceTest", "InterfaceTest\InterfaceTest.csproj", "{4CC3F9B5-D6D4-4198-BFC8-CD01AA4B539C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace abstractTest
 {
@@ -30,10 +31,12 @@ namespace abstractTest
             return "哞哞";
         }
     }
-
+   
 
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             Console.WriteLine("abstractTest");
@@ -41,23 +44,13 @@ namespace abstractTest
 
             while (true)
             {
-                string keyNum = Console.ReadLine();
-
-                Animal an = null;
-                if (keyNum.Equals("1"))
-                {
-                    an = new Duck();
-                }
-                else if (keyNum.Equals("2"))
-                {
-                    an = new Dog();
-                }
-                else if (keyNum.Equals("3"))
-                {
-                    an = new Cow();
-                }
-
+                string keyName = Console.ReadLine();
+                
+                AssemblyName name = new AssemblyName("abstractTest");
+                Assembly asm = Assembly.Load(name);
+                Animal an = (Animal)asm.CreateInstance("abstractTest." + keyName);
                 Console.WriteLine(AnimalShout(an));
+                   
             }
 
         }
@@ -67,7 +60,7 @@ namespace abstractTest
 
             if (an == null)
             {
-                return "please key 1~3";
+                return "please key Animal";
             }
             return an.Shout();
         }

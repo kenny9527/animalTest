@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace classTest
 {
@@ -41,28 +42,18 @@ namespace classTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ClassTest");
+            Console.WriteLine("classTest");
             Console.WriteLine("想聽哪隻動物叫 1.鴨 2.狗 3.牛");
 
             while (true)
             {
-                string keyNum = Console.ReadLine();
+                string keyName = Console.ReadLine();
 
-                Animal an = null;
-                if (keyNum.Equals("1"))
-                {
-                    an = new Duck();
-                }
-                else if (keyNum.Equals("2"))
-                {
-                    an = new Dog();
-                }
-                else if (keyNum.Equals("3"))
-                {
-                    an = new Cow();
-                }
-
+                AssemblyName name = new AssemblyName("classTest");
+                Assembly asm = Assembly.Load(name);
+                Animal an = (Animal)asm.CreateInstance("classTest." + keyName);
                 Console.WriteLine(AnimalShout(an));
+
             }
 
         }
@@ -72,7 +63,7 @@ namespace classTest
 
             if (an == null)
             {
-                return "please key 1~3";
+                return "please key Animal";
             }
             return an.Shout();
         }
